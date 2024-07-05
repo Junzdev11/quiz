@@ -17,7 +17,7 @@ players.sort((a, b) => b.correct - a.correct);
  msg += `Correct answers: ${player.correct}\n`;
   msg += `Wrong answers: ${player.wrong}\n\n`;
   });
- msg += `Total Players: ${players.length}\nPages: ${pg}/${Math.ceil(players.length / size)}\nType {p} leaderboard <page num> to view the next page`;
+ msg += `Total Players: ${players.length}\nPages: ${page}/${Math.ceil(players.length / size)}\nType {p} leaderboard <page num> to view the next page`;
    return { msg: msg.trim() };
   } catch (error) {
  console.error("Error fetching leaderboard:", error);
