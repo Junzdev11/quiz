@@ -8,7 +8,7 @@ async function leaderboardv2(page) {
 if (start >= allPlayers.length) {
  return { msg: `There are only ${Math.ceil(allPlayers.length / 5)} total pages.` };
         }     
-let rank = `│ [ 🏆 ] • Quiz Global Leaderboard\n│Quiz Started on: 6/30/2023\n│Current Date: ${new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Manila', month: 'long', day: 'numeric', year: 'numeric' })}\n│Quiz running: ${Math.floor((new Date(new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Manila' })) - new Date("6/30/2024")) / (1000 * 60 * 60 * 24)) + 1}days\n│\n│=======================\n`;        allPlayers.slice(start, end).forEach((player, i) => {
+let rank = `│ [ 🏆 ] • Quiz Global Leaderboard\n│Quiz Started on: 6/30/2024\n│Current Date: ${new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Manila', month: 'long', day: 'numeric', year: 'numeric' })}\n│Quiz running: ${Math.floor((new Date(new Date().toLocaleDateString('en-US', { timeZone: 'Asia/Manila' })) - new Date("6/30/2024")) / (1000 * 60 * 60 * 24)) + 1}days\n│\n│=======================\n`;        allPlayers.slice(start, end).forEach((player, i) => {
  rank += `│Rank #${start + i + 1}.\n│「${player.name}」\n│Correct answers: ${player.correct}\n│Wrong answers: ${player.wrong}\n│Total games: ${player.correct + player.wrong}\n╰──────────────────\n`;
  });
  rank += `Total Players: ${allPlayers.length}\nPages: ${page}/${Math.ceil(allPlayers.length / 5)}\nType {p} leaderboard <page num> to view the next page`; return { msg: rank.trim() };
