@@ -61,11 +61,7 @@ if (!categs.includes(category)) {
 }
  res.status(200).json(await QuizGame(category));
 });
-/*
-endpoint for adding question 
-adding question here requires permission:)
-baka kasi ano ano lang i add nyo sa db ko
-*/
+// endpoint for adding question 
 app.post('/addq', async (req, res) => {
     const { category, question, answer, apikey } = req.body;
     return res.status(200).json(await аddQuestion(category, question, answer, apikey));
