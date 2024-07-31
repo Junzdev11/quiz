@@ -66,6 +66,4 @@ app.post('/addq', async (req, res) => {
     const { category, question, answer, apikey } = req.body;
     return res.status(200).json(await аddQuestion(category, question, answer, apikey));
 });
-app.listen(Port, () => {
-console.log(`Server is live on port ${Port}`);
-});
+module.exports = app;
